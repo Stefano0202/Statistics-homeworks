@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penetration Simulation</title> 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        canvas {
-            max-width: 500px;
-            margin: 20px;
-        }
-        .chart-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Simulation</h1>
-
-    <label for="servers">Servers (n):</label>
-    <input type="number" id="servers" value="0" min="0">
-    
-    <label for="attackers">Attackers (m):</label>
-    <input type="number" id="attackers" value="0" min="0">
-    
-    <label for="lambda">Lambda (λ):</label>
-    <input type="number" id="lambda" value="0.7" step="0.01" min="0">
-    
-    <button id="startButton">Start Simulation</button>
-    <button id="resetButton">Reset</button>
-    
-    <h2>Results:</h2> 
-    <div class="chart-container">
-        <canvas id="attackerChart"></canvas>
-        <canvas id="frequencyChart"></canvas>
-    </div>
-    
-    <script>
         const random = () => Math.random(); // To generate a random number between 0 and 1
 
         // Initialize charts
@@ -201,6 +160,3 @@
                 }
             });
         }
-    </script>
-</body>
-</html>
